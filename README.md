@@ -1,2 +1,2 @@
 # Python
-Python Code Tests
+Python Code Tests done by learning the languange
