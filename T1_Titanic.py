@@ -21,3 +21,44 @@ data2  = pd.read_csv(main_path + "customer-churn-model/Customer Churn Model.txt"
 
 
 print(data2.columns.values)
+
+
+#Open Function
+
+data3 = open(main_path + "customer-churn-model/Customer Churn Model.txt","r")
+cols = data3.readline().strip().split(',')
+
+n_cols = len(cols)
+
+counter = 0
+
+main_dict = {}
+
+print(data3)
+
+print(cols)
+
+print(n_cols)
+
+for col in cols:
+    main_dict[col] = {}
+
+
+for line in data3:
+    values = line.strip().split(',')
+    for i in range(len(cols)):
+        main_dict[cols[i]] = (values[i])
+    counter +=1
+
+print(main_dict)
+
+#Write on a file
+
+infile = open(main_path + "customer-churn-model/Customer Churn Model.txt")
+outfile = open(main_path + "customer-churn-model/Tab Customer Churn Model.txt")
+
+with data3 as infile1:
+    with open(outfile,'w') as outfile1:
+        for line in infile1:
+            fields = line.strip().split(',')
+            outfile1.write("/t".join(fields))
