@@ -6,4 +6,4 @@ It's composed by the following topics.
   - Data load and data Cleaning :
       - I load data from multiple sources (xls,xlsx, csv) and reading from an URL.
       - Cleaning data and filling empty columns, etc.
-      - Multiple examples of how to create different plots(Histogram, ScatterPlot, BoxPlot).
+      - Multiple examples of how to create different plots(Histogram, ScatterPlot, BoxPlot)
