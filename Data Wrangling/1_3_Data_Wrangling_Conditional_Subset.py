@@ -26,3 +26,24 @@ print(data3)
 # OR
 data4 = data[(data["Day Mins"]>300) | (data["State"]=="NY")]
 print(data4)
+
+# Minuts on day, on night and account's longitude of the first 50
+subset_first_50 = data[["Day Mins", "Night Mins", "Account Length"]][:50]
+
+print(subset_first_50.head)
+
+# Columns and rows
+print(data.ix[1:10, 3:6]) # First 10 rows, columns from 3 to 6
+
+# Previous one, ix, is deprecated, so the new one is:
+print(data.iloc[1:10, 3:6])
+
+print(data.iloc[1:10], [2, 5, 7])
+
+# By name, we use loc
+print(data.loc[[1, 3], ["Area Code", "VMail Plan"]])
+
+# Add a new column
+data["Total Mins"] = data["Day Mins"] + data["Night Mins"] + data["Eve Mins"]
+
+print(data["Total Mins"].head)
